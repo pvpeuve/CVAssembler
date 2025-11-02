@@ -18,4 +18,4 @@
 
 ### Imágenes
 - [Página de inicio](https://github.com/pvpeuve/home_assistant_IoT_server/raw/main/images/ha_welcome.png)
-- [Página del tablero](https://github.com/pvpeuve/home_assistant_IoT_server/raw/main/images/ha_dashboard.png)https://github.com/pvpeuve/home_assistant_IoT_server/raw/main/images/ha_welcome.png
+- [Página del tablero](https://github.com/pvpeuve/home_assistant_IoT_server/raw/main/images/ha_dashboard.png)
