@@ -11,9 +11,9 @@ Técnico en IoT y Desarrollador Python Junior con experiencia práctica en autom
 - [Email](mailto:userandroidsp@gmail.com)
 
 ## Pipeline
-- 1: Generar CV unificado en Markdown (scripts/unir_secciones.py)
-- 2: Convertir a PDF (scripts/exportar_md_a_pdf.py)
-- 3: Sincronizar con LinkedIn (scripts/actualizar_linkedin.py)
+1: Generar CV unificado en Markdown (scripts/unir_secciones.py)
+2: Convertir a PDF (scripts/exportar_md_a_pdf.py)
+3: Sincronizar con LinkedIn (scripts/actualizar_linkedin.py)
 
 ## Tecnologías utilizadas
 - **Markdown** para estructurar contenido modular.
@@ -22,6 +22,7 @@ Técnico en IoT y Desarrollador Python Junior con experiencia práctica en autom
 - **GitHub Actions (pendiente)** para CI/CD y publicación automática.
 
 ## Estructura del repositorio
+```markdown
 CV/
 ├── datos/              # Secciones del CV (perfil, experiencia, etc.)
 ├── certificaciones/    # Certificados clasificados por empresa
@@ -29,6 +30,7 @@ CV/
 ├── scripts/            # Automatización (unión, exportación, sincronización)
 ├── salidas/            # CV generado (.md y .pdf)
 └── README.md           # Este archivo
+```
 
 ## Cómo generar el CV (pendiente de desarrollo)
 
