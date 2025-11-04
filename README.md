@@ -33,7 +33,6 @@ CV/
 ```
 
 ## Cómo generar el CV (pendiente de desarrollo)
-
 1. Clonar el repositorio
   ```bash
   git clone https://github.com/pvpeuve/CV.git
