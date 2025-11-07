@@ -1,0 +1,45 @@
+name: CD — Build & Release CV
+
+on:
+  workflow_run:
+    workflows: ["CI — CV (Ruff + Pytest)"]
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python & Pandoc
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          sudo apt-get update && sudo apt-get install -y pandoc
+          pip install pypandoc
+
+      - name: Build CV (MD + PDF)
+        run: |
+          python3 scripts/unir_secciones.py
+          python3 scripts/exportar_md_a_pdf.py
+
+      - name: Upload CV as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CV_PDF
+          path: salidas/CV_ES.pdf
+
+      - name: Commit and push updated CV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add salidas/CV_ES.pdf
+          git commit -m "chore: actualizar CV_ES.pdf [auto]"
+          git push
