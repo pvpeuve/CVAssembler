@@ -12,6 +12,20 @@ import json
 from pathlib import Path
 from typing import Dict, Any
 
+class SectionParser:
+    """
+    Minimal section parser.
+
+    This class can be expanded later to:
+    - clean markdown
+    - normalize headings
+    - remove empty lines
+    - handle metadata blocks
+    """
+
+    def parse(self, text: str) -> str:
+        """Basic parser that simply trims whitespace."""
+        return text.strip()
 
 class DataParser:
     """Utility to load user data from JSON files."""
