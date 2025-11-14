@@ -9,7 +9,6 @@ The logic is implemented progressively as the framework evolves.
 """
 
 from pathlib import Path
-from typing import List
 
 class CVBuilder:
     """
