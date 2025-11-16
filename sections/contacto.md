@@ -1,7 +1,7 @@
 # {{nombre_completo}}
 
 {{ciudad}}, {{pais}}
-{{email}} | 📱 {{telefono}}
+{{email}} | {{telefono}}
 [LinkedIn]({{linkedin}}) | [GitHub]({{github}})
 
 ---

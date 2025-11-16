@@ -1,5 +1,5 @@
 **Español:** Nativo
-**Inglés:** Nivel B2 (EF SET, 2024)
+**Inglés:** Nivel B2 (EF SET, 2025)
 
 <!--
 💡 Notas:
