@@ -1,7 +1,7 @@
-**Sistema de iluminación inteligente con WLED + MQTT**  
+**Sistema de iluminación inteligente con WLED + MQTT**
 Desarrollo de un sistema LED direccionable integrado con **Home Assistant**, gestionado por **ESP32**, para automatizar escenas lumínicas personalizadas.
 
-**Clasificador de imágenes (TensorFlow / Keras)**  
+**Clasificador de imágenes (TensorFlow / Keras)**
 Modelo básico entrenado para clasificación binaria, desplegado en **Google Colab**, como parte del aprendizaje en IA aplicada a visión por computadora.
 
 <!--
