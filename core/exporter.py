@@ -27,7 +27,12 @@ class CVExporter:
             str(self.input_file),
             "pdf",
             outputfile=str(output_pdf),
-            extra_args=["--pdf-engine=xelatex"]
+            extra_args=["--pdf-engine=xelatex",
+			"-V", "geometry:margin=1.5cm",
+			"-V", "mainfont=DejaVu Serif",
+			"-V", "sansfont=DejaVu Sans",
+			"-V", "monofont=DejaVu Sans Mono"
+	    ]
         )
 
         return output_pdf
