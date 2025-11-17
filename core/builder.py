@@ -25,7 +25,7 @@ class CVBuilder:
         """
         parts = []
         SECTION_ORDER = [
-    		"perfil",
+                "perfil",
     		"habilidades_tecnicas",
     		"habilidades_blandas",
     		"educacion",
@@ -34,7 +34,7 @@ class CVBuilder:
     		"proyectos"
 	]
         for name in SECTION_ORDER:
-	    file = self.sections_dir / f"{name}.md"
+            file = self.sections_dir / f"{name}.md"
             parts.append(file.read_text(encoding="utf-8"))
 
         return "\n\n".join(parts)
