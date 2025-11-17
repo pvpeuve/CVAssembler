@@ -1,40 +1,23 @@
 # {{nombre_completo}}
+{{ciudad}}, {{pais}} · {{email}} · {{telefono}}
+[LinkedIn]({{linkedin}}) · [GitHub]({{github}})
 
-**{{titulo_profesional}}**
-
- {{ciudad}}, {{pais}}
- {{email}} ·  {{telefono}}
- [LinkedIn]({{linkedin}}) · [GitHub]({{github}})
-
----
-
-##💼 Perfil Profesional
 {{perfil}}
 
----
-
-##Habilidades Técnicas
+## Habilidades técnicas
 {{habilidades_tecnicas}}
 
-## Habilidades Blandas
+## Habilidades blandas
 {{habilidades_blandas}}
-
----
 
 ## Educación
 {{educacion}}
 
----
-
-## Experiencia Profesional
+## Experiencia
 {{experiencia}}
-
----
 
 ## Certificaciones
 {{certificaciones}}
 
----
-
-## Proyectos Destacados
+## Proyectos
 {{proyectos}}
