@@ -21,7 +21,17 @@ class CVBuilder:
 
     def merge(self) -> str:
         parts = []
-
+        SECTION_ORDER = [
+          "perfil",
+          "contacto",
+          "educacion",
+          "experiencia",
+          "habilidades_tecnicas",
+          "habilidades_blandas",
+          "idiomas",
+          "certificaciones",
+          "proyectos",
+        ]
         for name in SECTION_ORDER:
             path = self.sections_dir / f"{name}.md"
 
