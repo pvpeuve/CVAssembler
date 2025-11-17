@@ -1,14 +1,8 @@
-# {{nombre_completo}}
+## Datos de Contacto
 
-{{ciudad}}, {{pais}}
-{{email}} | {{telefono}}
-[LinkedIn]({{linkedin}}) | [GitHub]({{github}})
-
----
-
-<!--
-💡 Notas:
-- Este bloque debe ir sin tablas ni columnas (ATS no las lee bien).
-- Usa enlaces Markdown normales para LinkedIn o GitHub.
-- Si prefieres, puedes sustituir {{}} por variables que luego rellene el script.
--->
+- **Nombre:** {{nombre_completo}}
+- **Ubicación:** {{ciudad}}, {{pais}}
+- **Email:** {{email}}
+- **Teléfono:** {{telefono}}
+- **LinkedIn:** {{linkedin}}
+- **GitHub:** {{github}}
