@@ -7,17 +7,18 @@ Incluye scripts CLI, plantillas personalizables, soporte para CI/CD y generació
 
 ## 🚀 Características principales
 
-- 🧩 **Secciones modulares** (`sections/`) → perfiles, educación, experiencia, habilidades, proyectos…
-- 🎨 **Plantillas personalizables** (`templates/default.md`)
-- 🛠️ **Core en Python** para unir secciones y exportar a PDF/HTML
-- 📦 **Scripts CLI** (`scripts/`) listos para automatizar generación y exportación
-- 🔄 **CI/CD integrado** (GitHub Actions)
-- 🧪 **Tests automáticos** con pytest + ruff
+* 🧩 **Secciones modulares** (`sections/`) → perfiles, educación, experiencia, habilidades, proyectos…
+* 🎨 **Plantillas personalizables** (`templates/default.md`)
+* 🛠️ **Core en Python** para unir secciones y exportar a PDF/HTML
+* 📦 **Scripts CLI** (`scripts/`) listos para automatizar generación y exportación
+* 🔄 **CI/CD integrado** (GitHub Actions)
+* 🧪 **Tests automáticos** con pytest + ruff
 
 ---
 
 ## 📂 Estructura del repositorio
 
+```bash
 CVAssembler/
 ├── core/ # Lógica interna: builder, parser, exporter
 ├── scripts/ # Scripts de automatización CLI
@@ -28,6 +29,7 @@ CVAssembler/
 ├── tests/ # Pruebas automáticas
 ├── docs/ # Documentación (changelog, etc.)
 └── .github/workflows/ # CI/CD (lint, tests, demo PDF)
+```
 
 ---
 
@@ -39,9 +41,7 @@ CVAssembler/
 python scripts/merge_sections.py
 ```
 Esto genera:
-```bash
-output/CV.md
-```
+**output/CV.md**
 
 ### 2. Exportar el CV a PDF
 
@@ -49,11 +49,9 @@ output/CV.md
 python scripts/export_pdf.py --input output/CV.md --output output/
 ```
 Esto genera:
-```bash
-output/CV.pdf
-```
+**output/CV.pdf**
 
-3. Generar un CV completo (merge + export)
+### 3. Generar un CV completo (merge + export)
 
 ```bash
 python scripts/generate_cv.py --pdf
@@ -68,9 +66,7 @@ python scripts/generate_cv.py --demo --pdf
 ## 🎨 Plantilla personalizable
 
 Se encuentra en:
-```bash
-templates/default.md
-```
+**templates/default.md**
 
 Incluye placeholders como:
 ```bash
@@ -85,7 +81,7 @@ Incluye placeholders como:
 ## 🔧 Scripts incluidos
 
 | Script | Función |
-|:------:|:-------:|
+|:-------|:-------:|
 | merge_sections.py | Une todas las secciones en un solo Markdown |
 | export_pdf.py | Convierte un Markdown a PDF con Pandoc |
 | generate_cv.py | Pipeline completo (merge + PDF) |
@@ -95,14 +91,14 @@ Incluye placeholders como:
 
 ## 🧪 Tests automáticos
 
-CI ejecuta:
-- Ruff (lint)
-- Pytest (tests unitarios)
+* CI ejecuta:
+  * Ruff (lint)
+  * Pytest (tests unitarios)
 
-Se prueban:
-- Unión de secciones
-- Parser de secciones
-- Exporter con mocking de pypandoc
+* Se prueban:
+  * Unión de secciones
+  * Parser de secciones
+  * Exporter con mocking de pypandoc
 
 ---
 
@@ -111,16 +107,16 @@ ncluye:
 
 ### ✔️ CI — Lint + Tests
 
-Ejecuta automáticamente:
-- Formato con Ruff
-- Test suite con pytest
+* Ejecuta automáticamente:
+  * Formato con Ruff
+  * Test suite con pytest
 
 ### ✔️ CD — Build Demo CV
 
-Cuando CI pasa correctamente:
-- Genera un demo_CV.md
-- Exporta demo_CV.pdf
-- Lo sube como artifact en GitHub
+* Cuando CI pasa correctamente:
+  * Genera un demo_CV.md
+  * Exporta demo_CV.pdf
+  * Lo sube como artifact en GitHub
 
 Esto garantiza que cualquiera que haga fork tiene un CV funcional desde el primer minuto.
 
@@ -129,17 +125,16 @@ Esto garantiza que cualquiera que haga fork tiene un CV funcional desde el prime
 ## 📦 Ejemplo de datos
 
 En la carpeta sections/ ya existe un CV completo de demostración con placeholders totalmente genéricos.
-
 Los usuarios solo deben abrirlos y reemplazar los valores.
 
 ---
 
 ## 🧰 Requisitos
 
-- Python ≥ 3.12
-- pypandoc
-- pandoc
-- xelatex (se instala dentro del CI/CD)
+* Python ≥ 3.12
+* pypandoc
+* pandoc (se instala dentro del CI/CD)
+* xelatex (se instala dentro del CI/CD)
 
 ---
 
