@@ -1,6 +1,7 @@
 # 📄 CVAssembler — Framework modular para generar CVs en Markdown y PDF
 
-**CVAssembler** es una herramienta modular escrita en Python que permite construir, unificar y exportar CVs profesionales usando secciones en Markdown y plantillas dinámicas.  
+**CVAssembler** es una herramienta modular escrita en Python que permite construir, unificar y exportar CVs profesionales usando secciones en Markdown y plantillas dinámicas.
+
 Incluye scripts CLI, plantillas personalizables, soporte para CI/CD y generación automática de PDF mediante `pypandoc` y `xelatex`.
 
 ---
@@ -41,6 +42,7 @@ CVAssembler/
 python scripts/merge_sections.py
 ```
 Esto genera:
+
 **output/CV.md**
 
 ### 2. Exportar el CV a PDF
@@ -49,6 +51,7 @@ Esto genera:
 python scripts/export_pdf.py --input output/CV.md --output output/
 ```
 Esto genera:
+
 **output/CV.pdf**
 
 ### 3. Generar un CV completo (merge + export)
@@ -66,6 +69,7 @@ python scripts/generate_cv.py --demo --pdf
 ## 🎨 Plantilla personalizable
 
 Se encuentra en:
+
 **templates/default.md**
 
 Incluye placeholders como:
@@ -81,7 +85,7 @@ Incluye placeholders como:
 ## 🔧 Scripts incluidos
 
 | Script | Función |
-|:-------|:-------:|
+|:------:|:-------:|
 | merge_sections.py | Une todas las secciones en un solo Markdown |
 | export_pdf.py | Convierte un Markdown a PDF con Pandoc |
 | generate_cv.py | Pipeline completo (merge + PDF) |
@@ -103,15 +107,14 @@ Incluye placeholders como:
 ---
 
 ## 🔄 CI/CD (GitHub Actions)
-ncluye:
 
-### ✔️ CI — Lint + Tests
+### CI — Lint + Tests
 
 * Ejecuta automáticamente:
   * Formato con Ruff
   * Test suite con pytest
 
-### ✔️ CD — Build Demo CV
+### CD — Build Demo CV
 
 * Cuando CI pasa correctamente:
   * Genera un demo_CV.md
@@ -125,6 +128,7 @@ Esto garantiza que cualquiera que haga fork tiene un CV funcional desde el prime
 ## 📦 Ejemplo de datos
 
 En la carpeta sections/ ya existe un CV completo de demostración con placeholders totalmente genéricos.
+
 Los usuarios solo deben abrirlos y reemplazar los valores.
 
 ---
@@ -141,6 +145,7 @@ Los usuarios solo deben abrirlos y reemplazar los valores.
 ## 📄 Licencia
 
 Este proyecto está bajo licencia MIT.
+
 Puedes usarlo, modificarlo y adaptarlo libremente.
 
 ---
