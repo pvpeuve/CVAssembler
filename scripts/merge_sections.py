@@ -8,7 +8,7 @@ into a unified CV markdown file.
 
 import argparse
 from pathlib import Path
-from core.builder import CVBuilder
+from core.builder import build
 
 
 def main():
@@ -21,13 +21,13 @@ def main():
     sections_dir = Path(args.sections)
     output_file = Path(args.output)
 
-    builder = CVBuilder(sections_dir=sections_dir, output_file=output_file)
+    builder = build(sections_dir=sections_dir, output_file=output_file)
 
     print(f"[INFO] Merging sections from {sections_dir} ...")
     try:
-        builder.build()
+        builder.merge()
     except NotImplementedError:
-        print("[WARN] build() is not implemented yet. Placeholder executed.")
+        print("[WARN] merge() is not implemented yet. Placeholder executed.")
     print(f"[INFO] Output saved to {output_file}")
 
 

@@ -7,7 +7,7 @@ CLI tool that converts a unified markdown CV into PDF.
 
 import argparse
 from pathlib import Path
-from core.exporter import CVExporter
+from core.exporter import export
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
     input_file = Path(args.input)
     output_dir = Path(args.output)
 
-    exporter = CVExporter(input_file=input_file, output_dir=output_dir)
+    exporter = export(input_file=input_file, output_dir=output_dir)
 
     print(f"[INFO] Exporting {input_file} to PDF...")
 

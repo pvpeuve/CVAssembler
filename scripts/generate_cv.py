@@ -9,8 +9,9 @@ High-level wrapper that:
 
 import typer
 from pathlib import Path
-from core.builder import CVBuilder
-from core.exporter import CVExporter
+from core.builder import build
+from core.exporter import export
+
 
 app = typer.Typer()
 
@@ -27,7 +28,7 @@ def main(
     pdf_output_dir = Path(pdf_output_dir)
 
     typer.echo("[INFO] Step 1: Merging Markdown sections...")
-    builder = CVBuilder(sections_dir=sections_dir, output_file=md_output_path)
+    builder = build(sections_dir=sections_dir, output_file=md_output_path)
     
     try:
         builder.save()
@@ -37,7 +38,7 @@ def main(
 
     if pdf:
         typer.echo("[INFO] Step 2: Exporting to PDF...")
-        exporter = CVExporter(input_file=md_output_path, output_dir=pdf_output_dir)
+        exporter = export(input_file=md_output_path, output_dir=pdf_output_dir)
 
         try:
             pdf_file = exporter.to_pdf()
